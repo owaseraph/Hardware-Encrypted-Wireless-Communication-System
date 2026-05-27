@@ -1,5 +1,5 @@
 module uart_rx #(
-    parameter CLKS_PER_BIT = 868 //115200 baud
+    parameter CLKS_PER_BIT = 33  // 100 MHz / 3 Mbaud ≈ 33.33 //115200 baud
 )(
     input        i_clk,
     input        i_rst,
