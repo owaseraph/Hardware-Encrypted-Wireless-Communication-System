@@ -1,0 +1,44 @@
+# ========================================
+# ESP-IDF Build Artifacts
+# ========================================
+# The build directory contains all compiled objects, binaries, and generated Makefiles/CMake files.
+build/
+*.bin
+*.elf
+*.map
+*.o
+*.a
+
+# ========================================
+# ESP-IDF Configuration
+# ========================================
+# sdkconfig contains your project-specific configurations. You should commit sdkconfig, 
+# but ignore the backup files generated when you run idf.py menuconfig.
+sdkconfig.old
+
+# ========================================
+# ESP-IDF Component Manager
+# ========================================
+# If you use the component manager (idf_component.yml), the fetched components are stored here.
+# These should be ignored as they are re-downloaded during the build process.
+managed_components/
+
+# ========================================
+# IDE and Environment
+# ========================================
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains / CLion
+.idea/
+cmake-build-*/
+
+# Eclipse / Espressif IDE
+.settings/
+.cproject
+.project
+
+# OS Generated Files
+.DS_Store
+Thumbs.db

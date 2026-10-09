@@ -1,0 +1,230 @@
+/* root */
+.root {
+    -fx-background-color: #0d0d0f;
+    -fx-font-family: "JetBrains Mono", "Consolas", monospace;
+    -fx-font-size: 13px;
+}
+
+/* ── top bar ─────────────────────────────────────────── */
+.top-bar {
+    -fx-background-color: #111114;
+    -fx-border-color: transparent transparent #1e2030 transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 8 12 8 12;
+    -fx-spacing: 8;
+}
+
+.status-dot-connected {
+    -fx-fill: #3ddc84;
+}
+.status-dot-disconnected {
+    -fx-fill: #ff5449;
+}
+
+/* ── panel labels ────────────────────────────────────── */
+.panel-label {
+    -fx-text-fill: #3a3f5c;
+    -fx-font-size: 10px;
+    -fx-font-family: "JetBrains Mono", "Consolas", monospace;
+    -fx-letter-spacing: 2;
+    -fx-padding: 0 0 4 2;
+}
+
+/* ── text areas ──────────────────────────────────────── */
+.text-area {
+    -fx-text-fill: #c9d1d9;
+    -fx-border-color: #1e2030;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+.text-area,
+.text-area .content,
+.text-area .scroll-pane,
+.text-area .scroll-pane .viewport,
+.text-area .scroll-pane .content {
+    -fx-background-color: #0d0d0f;
+    -fx-control-inner-background: #0d0d0f;
+}
+.text-area .content {
+    -fx-text-fill: #c9d1d9;
+    -fx-padding: 8;
+}
+.text-area:focused {
+    -fx-border-color: #1f6feb;
+}
+
+/* serial output: green phosphor tint */
+#serialOutputArea .content {
+    -fx-text-fill: #58d68d;
+    -fx-font-size: 12px;
+}
+
+/* logs: amber tint */
+#logsArea .content {
+    -fx-text-fill: #e3b341;
+    -fx-font-size: 12px;
+}
+
+/* sent: muted blue */
+#serialInputArea .content {
+    -fx-text-fill: #79c0ff;
+    -fx-font-size: 12px;
+}
+
+/* ── split pane ──────────────────────────────────────── */
+.split-pane {
+    -fx-background-color: #0d0d0f;
+    -fx-padding: 0;
+    -fx-box-border: transparent;
+}
+.split-pane-divider {
+    -fx-background-color: #1e2030;
+    -fx-padding: 1;
+}
+
+/* ── vbox / hbox panels ──────────────────────────────── */
+.vbox {
+    -fx-background-color: #0d0d0f;
+    -fx-padding: 0;
+}
+.hbox {
+    -fx-background-color: #111114;
+    -fx-padding: 8 12 8 12;
+    -fx-spacing: 8;
+}
+
+/* ── buttons ─────────────────────────────────────────── */
+.button {
+    -fx-background-color: #161b22;
+    -fx-text-fill: #c9d1d9;
+    -fx-border-color: #30363d;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-cursor: hand;
+    -fx-padding: 5 14 5 14;
+    -fx-font-family: "JetBrains Mono", "Consolas", monospace;
+    -fx-font-size: 12px;
+}
+.button:hover {
+    -fx-background-color: #1f2937;
+    -fx-border-color: #58a6ff;
+    -fx-text-fill: #ffffff;
+}
+.button:pressed {
+    -fx-background-color: #0d1117;
+    -fx-scale-y: 0.97;
+}
+
+/* connect button: accent */
+#connectBtn {
+    -fx-background-color: #0f3460;
+    -fx-border-color: #1f6feb;
+    -fx-text-fill: #58a6ff;
+}
+#connectBtn:hover {
+    -fx-background-color: #1f6feb;
+    -fx-text-fill: #ffffff;
+}
+
+/* disconnect: danger */
+#disconnectBtn {
+    -fx-border-color: #6e3838;
+    -fx-text-fill: #f85149;
+}
+#disconnectBtn:hover {
+    -fx-background-color: #3d1f1f;
+    -fx-border-color: #f85149;
+}
+
+/* send button */
+#sendBtn {
+    -fx-background-color: #0a3325;
+    -fx-border-color: #2ea043;
+    -fx-text-fill: #3ddc84;
+    -fx-font-weight: bold;
+}
+#sendBtn:hover {
+    -fx-background-color: #2ea043;
+    -fx-text-fill: #ffffff;
+}
+
+/* ── combo box ───────────────────────────────────────── */
+.combo-box {
+    -fx-background-color: #161b22;
+    -fx-border-color: #30363d;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+.combo-box .list-cell {
+    -fx-text-fill: #c9d1d9;
+    -fx-background-color: #161b22;
+    -fx-font-family: "JetBrains Mono", "Consolas", monospace;
+    -fx-font-size: 12px;
+}
+.combo-box-popup .list-view {
+    -fx-background-color: #161b22;
+    -fx-border-color: #30363d;
+}
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #1f2937;
+    -fx-text-fill: #58a6ff;
+}
+.combo-box .arrow-button {
+    -fx-background-color: #161b22;
+}
+.combo-box .arrow {
+    -fx-background-color: #58a6ff;
+}
+.combo-box:hover {
+    -fx-border-color: #58a6ff;
+}
+
+/* ── text field ──────────────────────────────────────── */
+.text-field {
+    -fx-background-color: #0d0d0f;
+    -fx-text-fill: #c9d1d9;
+    -fx-border-color: #30363d;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-prompt-text-fill: #3a3f5c;
+    -fx-font-family: "JetBrains Mono", "Consolas", monospace;
+    -fx-font-size: 13px;
+    -fx-padding: 6 10 6 10;
+}
+.text-field:focused {
+    -fx-border-color: #1f6feb;
+    -fx-background-color: #0d1117;
+}
+
+/* ── scroll bar ──────────────────────────────────────── */
+.scroll-bar {
+    -fx-background-color: #0d0d0f;
+    -fx-opacity: 0.6;
+}
+.scroll-bar .thumb {
+    -fx-background-color: #30363d;
+    -fx-background-radius: 3;
+}
+.scroll-bar .thumb:hover {
+    -fx-background-color: #58a6ff;
+    -fx-opacity: 1.0;
+}
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: #0d0d0f;
+    -fx-padding: 2;
+}
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-background-color: #3a3f5c;
+}
+
+/* ── labels ──────────────────────────────────────────── */
+.label {
+    -fx-text-fill: #8b949e;
+    -fx-font-size: 13px;
+}
