@@ -36,7 +36,7 @@ extern QueueHandle_t g_rx_ack_q;
 // ============================================================
 #define PAYLOAD_SIZE        240
 #define WINDOW_SIZE         16
-#define TIMEOUT_MS          80
+#define TIMEOUT_MS          300
 #define SEQ_MOD             32768   // Short.MAX_VALUE + 1
 
 // Packet wire size: 1+2+1+2+PAYLOAD_SIZE+2
